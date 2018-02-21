@@ -1,0 +1,33 @@
+body {
+  background-color: rgba(187, 187, 187, 0.6);
+}
+
+.section {
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+
+.section_about {
+  padding-top: 10%;
+  background-color: rgba(187, 187, 187, 0.6);
+}
+
+.section_portfolio {
+  background-color: rgba(168, 168, 168, 0.6);
+}
+
+.section_contact {
+  background-color: rgba(187, 187, 187, 0.6);
+}
+
+.section_aboutSite {
+  background-color: rgba(168, 168, 168, 0.6);
+}
+
+.menu.nav--margin-b-none {
+  margin-bottom: 0;
+}
+
+.menu.nav--color {
+  background-color: rgba(168, 168, 168, 0.9);
+}
