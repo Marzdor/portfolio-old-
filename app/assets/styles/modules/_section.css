@@ -1,0 +1,22 @@
+.section {
+  padding-top: 6%;
+  padding-bottom: 6%;
+  &_about {
+    background-color: red;
+    grid-area: about;
+  }
+  &_portfolio {
+    background-color: green;
+    grid-area: portfolio;
+  }
+  &_contact {
+    background-color: rgba(187, 187, 187, 0.6);
+    grid-area: contact;
+  }
+  &_aboutSite {
+    background-color: rgba(168, 168, 168, 0.6);
+    grid-area: footer;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}

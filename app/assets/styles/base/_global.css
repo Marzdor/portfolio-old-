@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(187, 187, 187, 0.6);
+}
+
+a {
+  text-decoration: none;
+}
