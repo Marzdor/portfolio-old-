@@ -351,30 +351,36 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .nav {
   display: grid;
   grid-area: nav;
-  grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2rem;
-  grid-gap: 1em;
+  position: fixed;
   align-items: center;
   background-color: white;
-  position: fixed;
+  grid-template-rows: 2rem;
   width: 100%;
-  grid-template-areas: ". logo . about portfolio contact .";
 }
 
+@media(min-width: 800px) {
+
+.nav {
+    grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". logo . about portfolio contact ."
+}
+  }
+
 .nav-btn {
-    color: black;
     text-align: center;
-    transition: all .5 ease-out;
+    transition: all .4s ease-out;
   }
 
 .nav-btn:hover {
-      -webkit-transform: scale(1.3);
-              transform: scale(1.3);
+      -webkit-transform: scale(1.8);
+              transform: scale(1.8);
+      background-color: gray;
     }
 
 .nav-btn-l {
@@ -394,8 +400,99 @@ a {
     }
 
 .container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
-  grid-template-rows: 2rem;
-  grid-template-areas: ". nav ." ". about ." ". portfolio ." ". footer .";
+  grid-template-columns: 1fr;
+  grid-template-areas: 'nav' 'about' 'portfolio' 'contact' 'footer';
 }
+
+.section {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section_about {
+    padding-top: 50px;
+    grid-area: about;
+    display: grid;
+    grid-gap: 0 50px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "body image" "titles image";
+  }
+
+.section_about_body {
+      grid-area: body;
+      align-self: end;
+    }
+
+.section_about_img {
+      grid-area: image;
+      width: 100%;
+    }
+
+.section_about_titles {
+      grid-area: titles;
+      align-self: start;
+      text-align: center;
+    }
+
+.section_portfolio {
+    grid-area: portfolio;
+    text-align: center;
+    display: grid;
+  }
+
+.section_portfolio_img {
+      width: 100%;
+    }
+
+.section_portfolio_img-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+      }
+
+.section_contact {
+    grid-area: contact;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "form body";
+    grid-column-gap: 1em;
+  }
+
+.section_contact_title {
+      grid-area: title;
+      text-align: center;
+    }
+
+.section_contact_form {
+      display: grid;
+      grid-area: form;
+      grid-row-gap: .5em;
+    }
+
+.section_contact_body {
+      grid-area: body;
+      align-self: center;
+    }
+
+.footer {
+  width: 100%;
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10em;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.footer-align-l {
+      justify-self: start;
+    }
+
+.footer-align-r {
+      justify-self: end;
+    }

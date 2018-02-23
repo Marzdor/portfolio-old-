@@ -1,20 +1,21 @@
 .nav {
   display: grid;
   grid-area: nav;
-  grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2rem;
-  grid-gap: 1em;
+  position: fixed;
   align-items: center;
   background-color: $navBackground;
-  position: fixed;
+  grid-template-rows: 2rem;
   width: 100%;
-  grid-template-areas: ". logo . about portfolio contact .";
+  @mixin atMedium {
+    grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". logo . about portfolio contact .";
+  }
   &-btn {
-    color: $navText;
     text-align: center;
-    transition: all .5 ease-out;
+    transition: all .4s ease-out;
     &:hover {
-      transform: scale(1.3);
+      transform: scale(1.8);
+      background-color: $navBtnBackgroundHover;
     }
     &-l {
       grid-area: logo;

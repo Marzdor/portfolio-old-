@@ -1,22 +1,59 @@
 .section {
-  padding-top: 6%;
-  padding-bottom: 6%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   &_about {
-    background-color: red;
+    padding-top: 50px;
     grid-area: about;
+    display: grid;
+    grid-gap: 0 50px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "body image" "titles image";
+    &_body {
+      grid-area: body;
+      align-self: end;
+    }
+    &_img {
+      grid-area: image;
+      width: 100%;
+    }
+    &_titles {
+      grid-area: titles;
+      align-self: start;
+      text-align: center;
+    }
   }
   &_portfolio {
-    background-color: green;
     grid-area: portfolio;
+    text-align: center;
+    display: grid;
+    &_img {
+      width: 100%;
+      &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+      }
+    }
   }
   &_contact {
-    background-color: rgba(187, 187, 187, 0.6);
     grid-area: contact;
-  }
-  &_aboutSite {
-    background-color: rgba(168, 168, 168, 0.6);
-    grid-area: footer;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "form body";
+    grid-column-gap: 1em;
+    &_title {
+      grid-area: title;
+      text-align: center;
+    }
+    &_form {
+      display: grid;
+      grid-area: form;
+      grid-row-gap: .5em;
+    }
+    &_body {
+      grid-area: body;
+      align-self: center;
+    }
   }
 }
