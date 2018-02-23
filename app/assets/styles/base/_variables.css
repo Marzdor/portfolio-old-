@@ -1,3 +1,9 @@
-$navBackground        : white;
-$navText              : black;
-$navBtnBackgroundHover: gray;
+$navBackground             : #E7E2DF;
+$navText                   : #000000;
+$navBtnBackgroundHover     : #c8c8c8;
+$bodyBackground            : #8a97a3;
+$containerBackground       : #9ca4ab;
+$sectionAboutBackground    : #9ca4ab;
+$sectionPortfolioBackground: #909aa3;
+$sectionContactBackground  : #9ca4ab;
+$footerBackground          : #E7E2DF;

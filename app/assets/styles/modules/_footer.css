@@ -1,5 +1,7 @@
 .footer {
+  background-color     : $footerBackground;
   width                : 100%;
+  text-align           : center;
   grid-area            : footer;
   display              : grid;
   padding-top          : 2%;
@@ -7,26 +9,23 @@
   grid-template-columns: 1fr;
   @mixin atMedium {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap      : 10em;
+    grid-column-gap      : 2em;
+  }
+  @mixin atLarge {
+    grid-column-gap: 10em;
   }
 
   &_icon {
-    transform: scale(2);
+    font-size: 2em;
   }
 
   &-align {
     &-l {
       justify-self: center;
-      @mixin atMedium {
-        justify-self: start;
-      }
     }
 
     &-r {
       justify-self: center;
-      :@mixin atMedium{
-        justify-self: end;
-      }
     }
   }
 }

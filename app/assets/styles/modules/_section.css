@@ -1,11 +1,6 @@
 .section {
-  @mixin atMedium {
-    width       : 90%;
-    margin-left : auto;
-    margin-right: auto;
-  }
-
   &_about {
+    background-color   : $sectionAboutBackground;
     grid-area          : about;
     display            : grid;
     grid-template-areas: "image" "titles" "body";
@@ -15,8 +10,11 @@
     }
 
     &_body {
-      grid-area : body;
-      text-align: center;
+      grid-area   : body;
+      width       : 90%;
+      text-align  : center;
+      line-height : 1.5;
+      justify-self: center;
       @mixin atMedium {
         align-self: end;
       }
@@ -24,43 +22,48 @@
 
     &_img {
       grid-area    : image;
-      width        : 75%;
       border-radius: 15%;
+      width        : 80%;
       align-self   : center;
       justify-self : center;
-      @mixin atMedium {
+      @mixin atLarge {
         border-radius: 5%;
-        width        : 100%;
+        transform    : scale(.8);
       }
     }
 
     &_titles {
-      grid-area : titles;
-      align-self: start;
-      text-align: center;
+      width       : 90%;
+      grid-area   : titles;
+      align-self  : start;
+      text-align  : center;
+      justify-self: center;
     }
   }
 
   &_portfolio {
-    grid-area : portfolio;
-    text-align: center;
-    display   : grid;
+    background-color: $sectionPortfolioBackground;
+    grid-area       : portfolio;
+    text-align      : center;
+    display         : grid;
 
     &_img {
-      width: 100%;
+      width        : 95%;
+      border-radius: 2%;
 
       &-grid {
         display     : grid;
         grid-row-gap: 1em;
         @mixin atMedium {
           grid-template-columns: 1fr 1fr;
-          grid-gap             : 1em;
+          grid-column-gap      : 0;
         }
       }
     }
   }
 
   &_contact {
+    background-color     : $sectionContactBackground;
     grid-area            : contact;
     display              : grid;
     grid-column-gap      : 0.5em;
@@ -83,10 +86,13 @@
     }
 
     &_body {
-      grid-area : body;
-      display   : none;
-      align-self: center;
+      grid-area   : body;
+      display     : none;
+      align-self  : center;
+      justify-self: center;
+      line-height : 1.5;
       @mixin atMedium {
+        width  : 90%;
         display: block;
       }
     }
