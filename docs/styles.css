@@ -342,16 +342,17 @@ template {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing : border-box;
+  font-family: 'Roboto Mono', monospace;
 }
 
 body {
-  background-color: rgba(187, 187, 187, 0.6);
+  background-color: #8a97a3;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color          : black;
 }
 
 .nav {
@@ -359,7 +360,7 @@ a {
   grid-area            : nav;
   position             : fixed;
   align-items          : center;
-  background-color     : white;
+  background-color     : #E7E2DF;
   grid-template-rows   : 2rem;
   width                : 100%;
   grid-template-columns: 1fr 1fr 1fr;
@@ -386,17 +387,13 @@ a {
   }
   }
 
-.nav-btn:hover {
-      -webkit-transform: none;
-              transform: none;
-    }
-
 @media(min-width: 1200px) {
 
 .nav-btn:hover {
-        -webkit-transform       : scale(1.8);
-                transform       : scale(1.8);
-        background-color: gray
+        -webkit-transform       : scale(1.3);
+                transform       : scale(1.3);
+        border-radius   : 20%;
+        background-color: #c8c8c8
     }
   }
 
@@ -427,8 +424,9 @@ a {
 .container {
   margin-left          : auto;
   margin-right         : auto;
+  background-color     : #9ca4ab;
   display              : grid;
-  padding-top          : 50px;
+  padding-top          : 30px;
   grid-template-columns: 1fr;
   grid-template-areas  : "nav" "about" "portfolio" "contact" "footer";
 }
@@ -440,16 +438,8 @@ a {
 }
   }
 
-@media(min-width: 750px) {
-
-.section {
-    width       : 90%;
-    margin-left : auto;
-    margin-right: auto
-}
-  }
-
 .section_about {
+    background-color   : #9ca4ab;
     grid-area          : about;
     display            : grid;
     grid-template-areas: "image" "titles" "body";
@@ -464,8 +454,11 @@ a {
   }
 
 .section_about_body {
-      grid-area : body;
-      text-align: center;
+      grid-area   : body;
+      width       : 90%;
+      text-align  : center;
+      line-height : 1.5;
+      justify-self: center;
     }
 
 @media(min-width: 750px) {
@@ -477,34 +470,39 @@ a {
 
 .section_about_img {
       grid-area    : image;
-      width        : 75%;
       border-radius: 15%;
+      width        : 80%;
       align-self   : center;
       justify-self : center;
     }
 
-@media(min-width: 750px) {
+@media(min-width: 1200px) {
 
 .section_about_img {
         border-radius: 5%;
-        width        : 100%
+        -webkit-transform    : scale(.8);
+                transform    : scale(.8)
     }
   }
 
 .section_about_titles {
-      grid-area : titles;
-      align-self: start;
-      text-align: center;
+      width       : 90%;
+      grid-area   : titles;
+      align-self  : start;
+      text-align  : center;
+      justify-self: center;
     }
 
 .section_portfolio {
-    grid-area : portfolio;
-    text-align: center;
-    display   : grid;
+    background-color: #909aa3;
+    grid-area       : portfolio;
+    text-align      : center;
+    display         : grid;
   }
 
 .section_portfolio_img {
-      width: 100%;
+      width        : 95%;
+      border-radius: 2%;
     }
 
 .section_portfolio_img-grid {
@@ -516,11 +514,12 @@ a {
 
 .section_portfolio_img-grid {
           grid-template-columns: 1fr 1fr;
-          grid-gap             : 1em
+          grid-column-gap      : 0
       }
   }
 
 .section_contact {
+    background-color     : #9ca4ab;
     grid-area            : contact;
     display              : grid;
     grid-column-gap      : 0.5em;
@@ -548,20 +547,25 @@ a {
     }
 
 .section_contact_body {
-      grid-area : body;
-      display   : none;
-      align-self: center;
+      grid-area   : body;
+      display     : none;
+      align-self  : center;
+      justify-self: center;
+      line-height : 1.5;
     }
 
 @media(min-width: 750px) {
 
 .section_contact_body {
+        width  : 90%;
         display: block
     }
   }
 
 .footer {
+  background-color     : #E7E2DF;
   width                : 100%;
+  text-align           : center;
   grid-area            : footer;
   display              : grid;
   padding-top          : 2%;
@@ -573,30 +577,25 @@ a {
 
 .footer {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap      : 10em
+    grid-column-gap      : 2em
+}
+  }
+
+@media(min-width: 1200px) {
+
+.footer {
+    grid-column-gap: 10em
 }
   }
 
 .footer_icon {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    font-size: 2em;
   }
 
 .footer-align-l {
       justify-self: center;
     }
-
-@media(min-width: 750px) {
-
-.footer-align-l {
-        justify-self: start
-    }
-  }
 
 .footer-align-r {
       justify-self: center;
     }
-
-.footer-align-r :@mixin atMedium{
-        justify-self: end;
-      }
