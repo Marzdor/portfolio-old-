@@ -355,33 +355,50 @@ a {
 }
 
 .nav {
-  display: grid;
-  grid-area: nav;
-  position: fixed;
-  align-items: center;
-  background-color: white;
-  grid-template-rows: 2rem;
-  width: 100%;
+  display              : grid;
+  grid-area            : nav;
+  position             : fixed;
+  align-items          : center;
+  background-color     : white;
+  grid-template-rows   : 2rem;
+  width                : 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas  : "logo portfolio contact";
 }
 
-@media(min-width: 800px) {
+@media(min-width: 750px) {
 
 .nav {
     grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: ". logo . about portfolio contact ."
+    grid-template-areas  : ". logo . about portfolio contact ."
 }
   }
 
 .nav-btn {
     text-align: center;
-    transition: all .4s ease-out;
+    transition: none;
+  }
+
+@media(min-width: 1200px) {
+
+.nav-btn {
+      transition: all 0.4s ease-out
+  }
   }
 
 .nav-btn:hover {
-      -webkit-transform: scale(1.8);
-              transform: scale(1.8);
-      background-color: gray;
+      -webkit-transform: none;
+              transform: none;
     }
+
+@media(min-width: 1200px) {
+
+.nav-btn:hover {
+        -webkit-transform       : scale(1.8);
+                transform       : scale(1.8);
+        background-color: gray
+    }
+  }
 
 .nav-btn-l {
       grid-area: logo;
@@ -389,7 +406,15 @@ a {
 
 .nav-btn-a {
       grid-area: about;
+      display  : none;
     }
+
+@media(min-width: 750px) {
+
+.nav-btn-a {
+        display: block
+    }
+  }
 
 .nav-btn-p {
       grid-area: portfolio;
@@ -400,49 +425,82 @@ a {
     }
 
 .container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
+  margin-left          : auto;
+  margin-right         : auto;
+  display              : grid;
+  padding-top          : 50px;
   grid-template-columns: 1fr;
-  grid-template-areas: 'nav' 'about' 'portfolio' 'contact' 'footer';
+  grid-template-areas  : "nav" "about" "portfolio" "contact" "footer";
 }
+
+@media(min-width: 750px) {
+
+.container {
+    width: 80%
+}
+  }
+
+@media(min-width: 750px) {
 
 .section {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+    width       : 90%;
+    margin-left : auto;
+    margin-right: auto
 }
+  }
 
 .section_about {
-    padding-top: 50px;
-    grid-area: about;
-    display: grid;
-    grid-gap: 0 50px;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: "body image" "titles image";
+    grid-area          : about;
+    display            : grid;
+    grid-template-areas: "image" "titles" "body";
+  }
+
+@media(min-width: 750px) {
+
+.section_about {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas  : "body image" "titles image"
+  }
   }
 
 .section_about_body {
-      grid-area: body;
-      align-self: end;
+      grid-area : body;
+      text-align: center;
     }
+
+@media(min-width: 750px) {
+
+.section_about_body {
+        align-self: end
+    }
+  }
 
 .section_about_img {
-      grid-area: image;
-      width: 100%;
+      grid-area    : image;
+      width        : 75%;
+      border-radius: 15%;
+      align-self   : center;
+      justify-self : center;
     }
 
+@media(min-width: 750px) {
+
+.section_about_img {
+        border-radius: 5%;
+        width        : 100%
+    }
+  }
+
 .section_about_titles {
-      grid-area: titles;
+      grid-area : titles;
       align-self: start;
       text-align: center;
     }
 
 .section_portfolio {
-    grid-area: portfolio;
+    grid-area : portfolio;
     text-align: center;
-    display: grid;
+    display   : grid;
   }
 
 .section_portfolio_img {
@@ -450,49 +508,95 @@ a {
     }
 
 .section_portfolio_img-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1em;
+        display     : grid;
+        grid-row-gap: 1em;
       }
 
+@media(min-width: 750px) {
+
+.section_portfolio_img-grid {
+          grid-template-columns: 1fr 1fr;
+          grid-gap             : 1em
+      }
+  }
+
 .section_contact {
-    grid-area: contact;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "title title" "form body";
-    grid-column-gap: 1em;
+    grid-area            : contact;
+    display              : grid;
+    grid-column-gap      : 0.5em;
+    grid-template-columns: 1fr;
+    grid-template-areas  : "title" "form";
+  }
+
+@media(min-width: 750px) {
+
+.section_contact {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas  : "title title" "form body"
+  }
   }
 
 .section_contact_title {
-      grid-area: title;
+      grid-area : title;
       text-align: center;
     }
 
 .section_contact_form {
-      display: grid;
-      grid-area: form;
-      grid-row-gap: .5em;
+      display     : grid;
+      grid-area   : form;
+      grid-row-gap: 0.5em;
     }
 
 .section_contact_body {
-      grid-area: body;
+      grid-area : body;
+      display   : none;
       align-self: center;
     }
 
+@media(min-width: 750px) {
+
+.section_contact_body {
+        display: block
+    }
+  }
+
 .footer {
-  width: 100%;
-  grid-area: footer;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10em;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  width                : 100%;
+  grid-area            : footer;
+  display              : grid;
+  padding-top          : 2%;
+  padding-bottom       : 2%;
+  grid-template-columns: 1fr;
 }
 
+@media(min-width: 750px) {
+
+.footer {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap      : 10em
+}
+  }
+
+.footer_icon {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+
 .footer-align-l {
-      justify-self: start;
+      justify-self: center;
     }
 
-.footer-align-r {
-      justify-self: end;
+@media(min-width: 750px) {
+
+.footer-align-l {
+        justify-self: start
     }
+  }
+
+.footer-align-r {
+      justify-self: center;
+    }
+
+.footer-align-r :@mixin atMedium{
+        justify-self: end;
+      }
