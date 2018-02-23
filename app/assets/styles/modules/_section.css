@@ -14,7 +14,7 @@
       width       : 90%;
       text-align  : center;
       line-height : 1.5;
-      justify-self: center;
+      justify-self: end;
       @mixin atMedium {
         align-self: end;
       }
@@ -27,8 +27,8 @@
       align-self   : center;
       justify-self : center;
       @mixin atLarge {
-        border-radius: 5%;
-        transform    : scale(.8);
+        width  : 60%;
+        padding: 1.5em;
       }
     }
 
@@ -37,7 +37,7 @@
       grid-area   : titles;
       align-self  : start;
       text-align  : center;
-      justify-self: center;
+      justify-self: end;
     }
   }
 

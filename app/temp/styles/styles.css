@@ -458,7 +458,7 @@ a {
       width       : 90%;
       text-align  : center;
       line-height : 1.5;
-      justify-self: center;
+      justify-self: end;
     }
 
 @media(min-width: 750px) {
@@ -479,9 +479,8 @@ a {
 @media(min-width: 1200px) {
 
 .section_about_img {
-        border-radius: 5%;
-        -webkit-transform    : scale(.8);
-                transform    : scale(.8)
+        width  : 60%;
+        padding: 1.5em
     }
   }
 
@@ -490,7 +489,7 @@ a {
       grid-area   : titles;
       align-self  : start;
       text-align  : center;
-      justify-self: center;
+      justify-self: end;
     }
 
 .section_portfolio {
