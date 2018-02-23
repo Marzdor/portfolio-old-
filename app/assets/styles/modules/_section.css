@@ -1,0 +1,94 @@
+.section {
+  @mixin atMedium {
+    width       : 90%;
+    margin-left : auto;
+    margin-right: auto;
+  }
+
+  &_about {
+    grid-area          : about;
+    display            : grid;
+    grid-template-areas: "image" "titles" "body";
+    @mixin atMedium {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas  : "body image" "titles image";
+    }
+
+    &_body {
+      grid-area : body;
+      text-align: center;
+      @mixin atMedium {
+        align-self: end;
+      }
+    }
+
+    &_img {
+      grid-area    : image;
+      width        : 75%;
+      border-radius: 15%;
+      align-self   : center;
+      justify-self : center;
+      @mixin atMedium {
+        border-radius: 5%;
+        width        : 100%;
+      }
+    }
+
+    &_titles {
+      grid-area : titles;
+      align-self: start;
+      text-align: center;
+    }
+  }
+
+  &_portfolio {
+    grid-area : portfolio;
+    text-align: center;
+    display   : grid;
+
+    &_img {
+      width: 100%;
+
+      &-grid {
+        display     : grid;
+        grid-row-gap: 1em;
+        @mixin atMedium {
+          grid-template-columns: 1fr 1fr;
+          grid-gap             : 1em;
+        }
+      }
+    }
+  }
+
+  &_contact {
+    grid-area            : contact;
+    display              : grid;
+    grid-column-gap      : 0.5em;
+    grid-template-columns: 1fr;
+    grid-template-areas  : "title" "form";
+    @mixin atMedium {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas  : "title title" "form body";
+    }
+
+    &_title {
+      grid-area : title;
+      text-align: center;
+    }
+
+    &_form {
+      display     : grid;
+      grid-area   : form;
+      grid-row-gap: 0.5em;
+    }
+
+    &_body {
+      grid-area : body;
+      display   : none;
+      align-self: center;
+      @mixin atMedium {
+        display: block;
+      }
+    }
+  }
+}

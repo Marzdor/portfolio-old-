@@ -1,0 +1,32 @@
+.footer {
+  width                : 100%;
+  grid-area            : footer;
+  display              : grid;
+  padding-top          : 2%;
+  padding-bottom       : 2%;
+  grid-template-columns: 1fr;
+  @mixin atMedium {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap      : 10em;
+  }
+
+  &_icon {
+    transform: scale(2);
+  }
+
+  &-align {
+    &-l {
+      justify-self: center;
+      @mixin atMedium {
+        justify-self: start;
+      }
+    }
+
+    &-r {
+      justify-self: center;
+      :@mixin atMedium{
+        justify-self: end;
+      }
+    }
+  }
+}

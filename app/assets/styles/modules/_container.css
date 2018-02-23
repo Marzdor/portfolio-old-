@@ -1,0 +1,11 @@
+.container {
+  margin-left          : auto;
+  margin-right         : auto;
+  display              : grid;
+  padding-top          : 50px;
+  grid-template-columns: 1fr;
+  grid-template-areas  : "nav" "about" "portfolio" "contact" "footer";
+  @mixin atMedium {
+    width: 80%;
+  }
+}
