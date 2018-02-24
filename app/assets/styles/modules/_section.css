@@ -8,6 +8,10 @@
       grid-template-columns: 2fr 1fr;
       grid-template-areas  : "body image" "titles image";
     }
+    @mixin atLarge {
+      grid-template-columns: 1fr;
+      grid-template-areas  : "image" "titles" "body";
+    }
 
     &_body {
       grid-area   : body;
@@ -18,6 +22,10 @@
       @mixin atMedium {
         align-self: end;
       }
+      @mixin atLarge {
+        justify-self: center;
+        margin      : 0;
+      }
     }
 
     &_img {
@@ -27,8 +35,9 @@
       align-self   : center;
       justify-self : center;
       @mixin atLarge {
-        width  : 60%;
-        padding: 1.5em;
+        margin-top: 1em;
+        width     : 40%;
+        padding   : 0;
       }
     }
 
@@ -38,25 +47,41 @@
       align-self  : start;
       text-align  : center;
       justify-self: end;
+      @mixin atLarge {
+        justify-self: center;
+        margin      : 0.5em 0;
+      }
     }
   }
 
   &_portfolio {
-    background-color: $sectionPortfolioBackground;
-    grid-area       : portfolio;
-    text-align      : center;
-    display         : grid;
+    background-color     : $sectionPortfolioBackground;
+    grid-area            : portfolio;
+    text-align           : center;
+    display              : grid;
+    grid-template-columns: 1fr;
+    grid-template-areas  : "title""grid";
+
+    &_title {
+      margin    : 0;
+      grid-area : title;
+      align-self: center;
+    }
 
     &_img {
       width        : 95%;
       border-radius: 2%;
 
       &-grid {
+        grid-area   : grid;
         display     : grid;
         grid-row-gap: 1em;
         @mixin atMedium {
           grid-template-columns: 1fr 1fr;
           grid-column-gap      : 0;
+        }
+        @mixin atLarge {
+          align-self: start;
         }
       }
     }
@@ -82,7 +107,11 @@
     &_form {
       display     : grid;
       grid-area   : form;
-      grid-row-gap: 0.5em;
+      grid-row-gap: 1em;
+      height      : 90%;
+      width       : 90%;
+      justify-self: center;
+      align-self  : center;
     }
 
     &_body {
@@ -90,7 +119,7 @@
       display     : none;
       align-self  : center;
       justify-self: center;
-      line-height : 1.5;
+      line-height : 1.2;
       @mixin atMedium {
         width  : 90%;
         display: block;

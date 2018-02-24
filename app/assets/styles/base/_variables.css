@@ -1,9 +1,7 @@
-$navBackground             : #E7E2DF;
+$navBackground             : #bec4d5;
 $navText                   : #000000;
-$navBtnBackgroundHover     : #c8c8c8;
-$bodyBackground            : #8a97a3;
-$containerBackground       : #9ca4ab;
-$sectionAboutBackground    : #9ca4ab;
-$sectionPortfolioBackground: #909aa3;
-$sectionContactBackground  : #9ca4ab;
-$footerBackground          : #E7E2DF;
+$bodyBackground            : #bec4d5;
+$sectionAboutBackground    : #dae2f7;
+$sectionPortfolioBackground: #dae2f7;
+$sectionContactBackground  : #dae2f7;
+$footerBackground          : #bec4d5;

@@ -1,12 +1,15 @@
 .container {
   margin-left          : auto;
   margin-right         : auto;
-  background-color     : $containerBackground;
   display              : grid;
   padding-top          : 30px;
   grid-template-columns: 1fr;
   grid-template-areas  : "nav" "about" "portfolio" "contact" "footer";
   @mixin atMedium {
     width: 80%;
+  }
+  @mixin atLarge {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas  : "nav nav" "about portfolio" "contact portfolio" "footer footer";
   }
 }

@@ -11,3 +11,11 @@ a {
   text-decoration: none;
   color          : black;
 }
+@mixin atLarge {
+  body,
+  html {
+    margin  : 0;
+    height  : 100%;
+    overflow: hidden;
+  }
+}
