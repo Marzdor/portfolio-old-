@@ -15,6 +15,7 @@
   @mixin atLarge {
     grid-template-columns: 1fr;
     grid-template-areas  : "logo";
+    padding              : 0.5em 0;
   }
 
   &-btn {

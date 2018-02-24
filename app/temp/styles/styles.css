@@ -388,7 +388,8 @@ a {
 
 .nav {
     grid-template-columns: 1fr;
-    grid-template-areas  : "logo"
+    grid-template-areas  : "logo";
+    padding              : 0.5em 0
 }
   }
 
@@ -531,7 +532,7 @@ a {
 @media(min-width: 1200px) {
 
 .section_about_img {
-        margin-top: 1em;
+        margin-top: 1.5em;
         width     : 40%;
         padding   : 0
     }
