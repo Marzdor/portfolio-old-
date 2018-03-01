@@ -355,7 +355,7 @@ a {
   color          : black;
 }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
   body,
   html {
     margin  : 0;
@@ -384,7 +384,7 @@ a {
 }
   }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .nav {
     grid-template-columns: 1fr;
@@ -402,7 +402,7 @@ a {
       grid-area: logo;
     }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .nav-btn-l {
         font-size  : 2rem;
@@ -422,7 +422,7 @@ a {
     }
   }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .nav-btn-a {
         display: none
@@ -433,7 +433,7 @@ a {
       grid-area: portfolio;
     }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .nav-btn-p {
         display: none
@@ -444,7 +444,7 @@ a {
       grid-area: contact;
     }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .nav-btn-c {
         display: none
@@ -467,7 +467,7 @@ a {
 }
   }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .container {
     grid-template-columns: 1fr 2fr;
@@ -490,7 +490,7 @@ a {
   }
   }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .section_about {
       grid-template-columns: 1fr;
@@ -514,7 +514,7 @@ a {
     }
   }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .section_about_body {
         justify-self: center;
@@ -530,7 +530,7 @@ a {
       justify-self : center;
     }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .section_about_img {
         margin-top: 1.5em;
@@ -547,7 +547,7 @@ a {
       justify-self: end;
     }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .section_about_titles {
         justify-self: center;
@@ -589,7 +589,7 @@ a {
       }
   }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .section_portfolio_img-grid {
           align-self: start
@@ -663,7 +663,7 @@ a {
 }
   }
 
-@media(min-width: 1200px) {
+@media(min-width: 1920px) {
 
 .footer {
     grid-column-gap: 10em;
