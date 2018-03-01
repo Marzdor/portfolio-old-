@@ -15,11 +15,12 @@
 
     &_body {
       grid-area   : body;
-      width       : 90%;
+      width       : 100%;
       text-align  : center;
       line-height : 1.5;
       justify-self: end;
       @mixin atMedium {
+        width     : 90%;
         align-self: end;
       }
       @mixin atLarge {

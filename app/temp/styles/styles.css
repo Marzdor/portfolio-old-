@@ -500,7 +500,7 @@ a {
 
 .section_about_body {
       grid-area   : body;
-      width       : 90%;
+      width       : 100%;
       text-align  : center;
       line-height : 1.5;
       justify-self: end;
@@ -509,6 +509,7 @@ a {
 @media(min-width: 750px) {
 
 .section_about_body {
+        width     : 90%;
         align-self: end
     }
   }
