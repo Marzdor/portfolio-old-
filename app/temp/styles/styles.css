@@ -475,12 +475,9 @@ a {
 }
   }
 
-@media(min-width: 1920px) {
-
 .section {
-    padding-bottom: 1em
+  padding-bottom: 1.5em;
 }
-  }
 
 .section_about {
     background-color   : #dae2f7;
