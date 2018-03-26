@@ -13,7 +13,6 @@
   }
   @mixin atLarge {
     grid-column-gap: 10em;
-    padding        : 0 0 10%;
   }
 
   &_icon {

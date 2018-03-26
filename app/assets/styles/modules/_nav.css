@@ -11,6 +11,7 @@
   @mixin atMedium {
     grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr 1fr;
     grid-template-areas  : ". logo . about portfolio contact .";
+    grid-gap             : 1em;
   }
   @mixin atLarge {
     grid-template-columns: 1fr;

@@ -358,9 +358,8 @@ a {
 @media(min-width: 1920px) {
   body,
   html {
-    margin  : 0;
-    height  : 100%;
-    overflow: hidden;
+    margin: 0;
+    height: 100%;
   }
   }
 
@@ -380,7 +379,8 @@ a {
 
 .nav {
     grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr 1fr;
-    grid-template-areas  : ". logo . about portfolio contact ."
+    grid-template-areas  : ". logo . about portfolio contact .";
+    grid-gap             : 1em
 }
   }
 
@@ -475,6 +475,13 @@ a {
 }
   }
 
+@media(min-width: 1920px) {
+
+.section {
+    padding-bottom: 1em
+}
+  }
+
 .section_about {
     background-color   : #dae2f7;
     grid-area          : about;
@@ -494,7 +501,8 @@ a {
 
 .section_about {
       grid-template-columns: 1fr;
-      grid-template-areas  : "image" "titles" "body"
+      grid-template-areas  : "image" "titles" "body";
+      padding-bottom       : 0
   }
   }
 
@@ -518,7 +526,7 @@ a {
 
 .section_about_body {
         justify-self: center;
-        margin      : 0
+        margin-top  : -5em
     }
   }
 
@@ -533,16 +541,15 @@ a {
 @media(min-width: 1920px) {
 
 .section_about_img {
-        margin-top: 1.5em;
-        width     : 40%;
-        padding   : 0
+        width  : 40%;
+        padding: 0
     }
   }
 
 .section_about_titles {
       width       : 90%;
       grid-area   : titles;
-      align-self  : start;
+      align-self  : center;
       text-align  : center;
       justify-self: end;
     }
@@ -551,7 +558,7 @@ a {
 
 .section_about_titles {
         justify-self: center;
-        margin      : 0.5em 0
+        margin      : 0
     }
   }
 
@@ -565,14 +572,22 @@ a {
   }
 
 .section_portfolio_title {
-      margin    : 0;
-      grid-area : title;
-      align-self: center;
+      margin-bottom: 1em;
+      grid-area    : title;
+      align-self   : center;
     }
+
+@media(min-width: 1920px) {
+
+.section_portfolio_title {
+        margin-top: 25px
+    }
+  }
 
 .section_portfolio_img {
       width        : 95%;
       border-radius: 2%;
+      border       : 3px solid #fff;
     }
 
 .section_portfolio_img-grid {
@@ -617,6 +632,14 @@ a {
       grid-area : title;
       text-align: center;
     }
+
+@media(min-width: 1920px) {
+
+.section_contact_title {
+        margin    : 0;
+        align-self: center
+    }
+  }
 
 .section_contact_form {
       display     : grid;
@@ -666,8 +689,7 @@ a {
 @media(min-width: 1920px) {
 
 .footer {
-    grid-column-gap: 10em;
-    padding        : 0 0 10%
+    grid-column-gap: 10em
 }
   }
 

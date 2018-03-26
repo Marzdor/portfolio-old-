@@ -1,4 +1,8 @@
 .section {
+  @mixin atLarge {
+    padding-bottom: 1em;
+  }
+
   &_about {
     background-color   : $sectionAboutBackground;
     grid-area          : about;
@@ -11,6 +15,7 @@
     @mixin atLarge {
       grid-template-columns: 1fr;
       grid-template-areas  : "image" "titles" "body";
+      padding-bottom       : 0;
     }
 
     &_body {
@@ -25,7 +30,7 @@
       }
       @mixin atLarge {
         justify-self: center;
-        margin      : 0;
+        margin-top  : -5em;
       }
     }
 
@@ -36,21 +41,20 @@
       align-self   : center;
       justify-self : center;
       @mixin atLarge {
-        margin-top: 1.5em;
-        width     : 40%;
-        padding   : 0;
+        width  : 40%;
+        padding: 0;
       }
     }
 
     &_titles {
       width       : 90%;
       grid-area   : titles;
-      align-self  : start;
+      align-self  : center;
       text-align  : center;
       justify-self: end;
       @mixin atLarge {
         justify-self: center;
-        margin      : 0.5em 0;
+        margin      : 0;
       }
     }
   }
@@ -64,14 +68,18 @@
     grid-template-areas  : "title""grid";
 
     &_title {
-      margin    : 0;
-      grid-area : title;
-      align-self: center;
+      margin-bottom: 1em;
+      grid-area    : title;
+      align-self   : center;
+      @mixin atLarge {
+        margin-top: 25px;
+      }
     }
 
     &_img {
       width        : 95%;
       border-radius: 2%;
+      border       : 3px solid #fff;
 
       &-grid {
         grid-area   : grid;
@@ -103,6 +111,10 @@
     &_title {
       grid-area : title;
       text-align: center;
+      @mixin atLarge {
+        margin    : 0;
+        align-self: center;
+      }
     }
 
     &_form {
