@@ -1,3 +1,4 @@
 $M-dividerWidth: 98%;
-$M-marginLF: 5%;
-$M-thumbnailWidth: calc(100% - ($M-marginLF * 2));
+$M-marginLR: 5%;
+$M-thumbnailWidth: calc(100% - ($M-marginLR * 2.5));
+$M-paddingL: 5px;

@@ -1,8 +1,8 @@
 .portfolio {
     &-image {
         width: $M-thumbnailWidth;
-        padding: 5px 0 0 3px;
+        padding: 5px 0 0 $M-paddingL;
         border-left: 1px solid black;
-        margin: -4px $M-marginLF 0 $M-marginLF;
+        margin: -4px $M-marginLR 0 $M-marginLR;
     }
 }

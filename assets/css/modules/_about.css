@@ -10,8 +10,8 @@
         border-color: black;
     }
     &-body {
-        margin: 0 $M-marginLF;
-        padding-left: 3px;
+        margin: 0 $M-marginLR;
+        padding-left: $M-paddingL;
         border-left: 1px solid black;
     }
 }
