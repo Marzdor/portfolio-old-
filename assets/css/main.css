@@ -2,7 +2,7 @@
 @import "base/_variables";
 @import "base/_mixins";
 @import "base/_global";
-@import "modules/_nav";
-@import "modules/_container";
-@import "modules/_section";
-@import "modules/_footer";
+@import "modules/_nav.css";
+@import "modules/_about.css";
+@import "modules/_portfolio.css";
+@import "modules/_findMe.css";

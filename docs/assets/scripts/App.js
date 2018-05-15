@@ -1,24 +1,15 @@
-import SmoothScroll from "./modules/SmoothScroll";
+window.onload = function () {
+  genPortfolio();
+}
 
-var about = document.querySelectorAll("a[href='#about']");
-var portfolio = document.querySelector("a[href='#portfolio']");
-var contact = document.querySelector("a[href='#contact']");
+function genPortfolio() {
+  const baseNames = ["calculator", "pomodoroClock", "quote", "tictactoe", "travel", "twitchViewer", "weather", "wikipediaViewer"];
 
-
-about.forEach(function(element) {
-  element.addEventListener("click", function() {
-    var target = document.querySelector(".section_about");
-    var topPos = target.offsetTop - 40;
-    SmoothScroll(document.body, topPos, 1000);
-  });
-});
-portfolio.addEventListener("click", function() {
-  var target = document.querySelector(".section_portfolio");
-  var topPos = target.offsetTop - 40;
-  SmoothScroll(document.body, topPos, 1000);
-});
-contact.addEventListener("click", function() {
-  var target = document.querySelector(".section_contact");
-  var topPos = target.offsetTop - 40;
-  SmoothScroll(document.body, topPos, 1000);
-});
+  for (let i = 0; i < baseNames.length; i++) {
+    const markup = `
+    <img class="portfolio-image" src="assets/images/${baseNames[i]}_320x240.png" alt="Thumbnail of ${baseNames[i]} website.">
+    `;
+    const target = document.querySelector(".portfolio");
+    target.insertAdjacentHTML("beforeend", markup);
+  }
+}

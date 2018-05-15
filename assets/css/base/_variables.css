@@ -1,7 +1,3 @@
-$navBackground             : #bec4d5;
-$navText                   : #000000;
-$bodyBackground            : #bec4d5;
-$sectionAboutBackground    : #dae2f7;
-$sectionPortfolioBackground: #dae2f7;
-$sectionContactBackground  : #dae2f7;
-$footerBackground          : #bec4d5;
+$M-dividerWidth: 98%;
+$M-marginLF: 5%;
+$M-thumbnailWidth: calc(100% - ($M-marginLF * 2));

@@ -1,59 +1,24 @@
 .nav {
-  display              : grid;
-  grid-area            : nav;
-  position             : fixed;
-  align-items          : center;
-  background-color     : $navBackground;
-  grid-template-rows   : 2rem;
-  width                : 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas  : "logo portfolio contact";
-  @mixin atMedium {
-    grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr 1fr;
-    grid-template-areas  : ". logo . about portfolio contact .";
-    grid-gap             : 1em;
-  }
-  @mixin atLarge {
-    grid-template-columns: 1fr;
-    grid-template-areas  : "logo";
-    padding              : 0.5em 0;
-  }
-
-  &-btn {
-    text-align: center;
-    transition: none;
-
-    &-l {
-      grid-area: logo;
-      @mixin atLarge {
-        font-size  : 2rem;
-        font-weight: bold;
-      }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 30px;
+    justify-items: center;
+    margin: 20px 0 0 0;
+    &-image {
+        width: 40%;
+        grid-column: 1 / span 3;
+        border-radius: 25%;
     }
-
-    &-a {
-      grid-area: about;
-      display  : none;
-      @mixin atMedium {
-        display: block;
-      }
-      @mixin atLarge {
-        display: none;
-      }
+    &-link {
+        margin: 10px 0 0 0;
+        &-about {
+            grid-column: 1 / span 1;
+        }
+        &-portfolio {
+            grid-column: 2 / span 1;
+        }
+        &-github {
+            grid-column: 3 / span 1;
+        }
     }
-
-    &-p {
-      grid-area: portfolio;
-      @mixin atLarge {
-        display: none;
-      }
-    }
-
-    &-c {
-      grid-area: contact;
-      @mixin atLarge {
-        display: none;
-      }
-    }
-  }
 }
