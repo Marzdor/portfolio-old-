@@ -4,21 +4,43 @@
     grid-template-rows: 1fr 30px;
     justify-items: center;
     margin: 20px 0 0 0;
+    @mixin atMedium {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column: 1 / span 2;
+    }
     &-image {
         width: 40%;
         grid-column: 1 / span 3;
         border-radius: 25%;
+        @mixin atMedium {
+            width: 80%;
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 4;
+            align-self: center;
+        }
     }
     &-link {
         margin: 10px 0 0 0;
         &-about {
             grid-column: 1 / span 1;
+            @mixin atMedium {
+                display: none;
+            }
         }
         &-portfolio {
             grid-column: 2 / span 1;
+            @mixin atMedium {
+                grid-column: 2 / span 1;
+                grid-row: 2 / span 1;
+            }
         }
         &-github {
             grid-column: 3 / span 1;
+            @mixin atMedium {
+                grid-column: 2 / span 1;
+                grid-row: 3 / span 1;
+            }
         }
     }
 }

@@ -1,4 +1,10 @@
+/* mobile variables */
+
 $M-dividerWidth: 98%;
 $M-marginLR: 5%;
 $M-thumbnailWidth: calc(100% - ($M-marginLR * 2.5));
 $M-paddingL: 5px;
+/* tablet variables */
+
+$T-dividerWidth: 60%;
+$T-thumbnailWidth: 60%;

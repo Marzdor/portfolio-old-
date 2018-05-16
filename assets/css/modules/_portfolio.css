@@ -1,8 +1,14 @@
 .portfolio {
+    grid-column: 1 / span 1;
     &-image {
         width: $M-thumbnailWidth;
         padding: 5px 0 0 $M-paddingL;
         border-left: 1px solid black;
         margin: -4px $M-marginLR 0 $M-marginLR;
+        @mixin atMedium {
+            border: none;
+            width: $T-thumbnailWidth;
+            margin: 0 auto;
+        }
     }
 }

@@ -340,6 +340,10 @@ template {
   display: none;
 }
 
+/* mobile variables */
+
+/* tablet variables */
+
 * {
   box-sizing: border-box;
 }
@@ -357,11 +361,30 @@ a {
     margin: 20px 0 0 0;
 }
 
+@media(min-width: 600px) {
+
+.nav {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column: 1 / span 2
+}
+  }
+
 .nav-image {
         width: 40%;
         grid-column: 1 / span 3;
         border-radius: 25%;
     }
+
+@media(min-width: 600px) {
+
+.nav-image {
+            width: 80%;
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 4;
+            align-self: center
+    }
+  }
 
 .nav-link {
         margin: 10px 0 0 0;
@@ -371,13 +394,40 @@ a {
             grid-column: 1 / span 1;
         }
 
+@media(min-width: 600px) {
+
+.nav-link-about {
+                display: none
+        }
+  }
+
 .nav-link-portfolio {
             grid-column: 2 / span 1;
         }
 
+@media(min-width: 600px) {
+
+.nav-link-portfolio {
+                grid-column: 2 / span 1;
+                grid-row: 2 / span 1
+        }
+  }
+
 .nav-link-github {
             grid-column: 3 / span 1;
         }
+
+@media(min-width: 600px) {
+
+.nav-link-github {
+                grid-column: 2 / span 1;
+                grid-row: 3 / span 1
+        }
+  }
+
+.about {
+    grid-column: 1 / span 1;
+}
 
 .about-name {
         font-size: 1.6rem;
@@ -391,11 +441,31 @@ a {
         border-color: black;
     }
 
+@media(min-width: 600px) {
+
+.about-divider {
+            width: 60%;
+            margin: 0 auto
+    }
+  }
+
 .about-body {
         margin: 0 5%;
         padding-left: 5px;
         border-left: 1px solid black;
     }
+
+@media(min-width: 600px) {
+
+.about-body {
+            width: 80%;
+            border: none
+    }
+  }
+
+.portfolio {
+    grid-column: 1 / span 1;
+}
 
 .portfolio-image {
         width: calc(100% - (5% * 2.5));
@@ -404,8 +474,18 @@ a {
         margin: -4px 5% 0 5%;
     }
 
+@media(min-width: 600px) {
+
+.portfolio-image {
+            border: none;
+            width: 60%;
+            margin: 0 auto
+    }
+  }
+
 .findMe {
     text-align: center;
+    grid-column: 1 / span 2;
 }
 
 .findMe-title {
@@ -427,3 +507,16 @@ a {
         width: 98%;
         border-color: black;
     }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media(min-width: 600px) {
+
+.container {
+        grid-template-columns: 1fr 2fr;
+        margin: 0 auto
+}
+  }
