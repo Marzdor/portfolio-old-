@@ -1,5 +1,8 @@
 .about {
     grid-column: 1 / span 1;
+    @mixin atMedium {
+        grid-column: 2 / span 1;
+    }
     &-name {
         font-size: 1.6rem;
         text-align: center;

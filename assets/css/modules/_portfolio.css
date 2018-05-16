@@ -1,14 +1,36 @@
 .portfolio {
     grid-column: 1 / span 1;
+    @mixin atMedium {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1 / span 2;
+        margin-top: 10px;
+    }
+    &-divider {
+        display: none;
+        @mixin atMedium {
+            grid-column: 1 / span 2;
+            display: block;
+            border-color: black;
+            width: 100%;
+        }
+    }
     &-image {
-        width: $M-thumbnailWidth;
         padding: 5px 0 0 $M-paddingL;
         border-left: 1px solid black;
         margin: -4px $M-marginLR 0 $M-marginLR;
+        display: inline-block;
+        & img {
+            width: $M-thumbnailWidth;
+            @mixin atMedium {
+                width: $T-thumbnailWidth;
+            }
+        }
         @mixin atMedium {
+            text-align: center;
             border: none;
-            width: $T-thumbnailWidth;
-            margin: 0 auto;
+            margin: 0;
+            padding: 0;
         }
     }
 }

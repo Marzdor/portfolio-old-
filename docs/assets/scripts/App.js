@@ -7,8 +7,8 @@ function genPortfolio() {
 
   for (let i = 0; i < baseNames.length; i++) {
     const markup = `
-    <a href="https://marzdor.github.io/${baseNames[i]}">
-      <img class="portfolio-image" src="assets/images/${baseNames[i]}_320x240.png" alt="Thumbnail of ${baseNames[i]} website.">
+    <a class="portfolio-image" href="https://marzdor.github.io/${baseNames[i]}">
+      <img src="assets/images/${baseNames[i]}_small.png" alt="Thumbnail of ${baseNames[i]} website.">
     </a>
     `;
     const target = document.querySelector(".portfolio");
