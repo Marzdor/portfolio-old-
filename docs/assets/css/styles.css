@@ -358,13 +358,19 @@ a {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 30px;
     justify-items: center;
-    margin: 20px 0 0 0;
 }
 
 @media(min-width: 600px) {
 
 .nav {
         grid-column: 1 / span 1
+}
+  }
+
+@media(min-width: 1400px) {
+
+.nav {
+        border-top: 2px solid black
 }
   }
 
@@ -379,6 +385,13 @@ a {
 .nav-image {
             width: 70%;
             align-self: center
+    }
+  }
+
+@media(min-width: 1400px) {
+
+.nav-image {
+            width: 90%
     }
   }
 
@@ -430,10 +443,18 @@ a {
 }
   }
 
+@media(min-width: 1400px) {
+
+.about {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1
+}
+  }
+
 .about-name {
         font-size: 1.6rem;
         text-align: center;
-        margin: 20px 0 0 0;
+        margin: 0;
     }
 
 .about-divider {
@@ -464,6 +485,15 @@ a {
     }
   }
 
+@media(min-width: 1400px) {
+
+.about-body {
+            width: 100%;
+            margin: 0;
+            padding: 0
+    }
+  }
+
 .portfolio {
     grid-column: 1 / span 1;
 }
@@ -473,8 +503,17 @@ a {
 .portfolio {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column: 1 / span 2;
-        margin-top: 10px
+        grid-column: 1 / span 2
+}
+  }
+
+@media(min-width: 1400px) {
+
+.portfolio {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 3;
+        border-bottom: 2px solid black;
+        padding-bottom: 15px
 }
   }
 
@@ -488,7 +527,15 @@ a {
             grid-column: 1 / span 2;
             display: block;
             border-color: black;
-            width: 100%
+            width: 100%;
+            margin: 0 0 10px 0
+    }
+  }
+
+@media(min-width: 1400px) {
+
+.portfolio-divider {
+            margin: 0
     }
   }
 
@@ -501,11 +548,13 @@ a {
 
 .portfolio-image img {
             width: calc(100% - (5% * 2.5));
+            padding-top: 5px;
         }
 
 @media(min-width: 600px) {
 
 .portfolio-image img {
+                padding-top: 15px;
                 width: 90%
         }
   }
@@ -528,7 +577,19 @@ a {
 @media(min-width: 600px) {
 
 .findMe {
-        grid-column: 1 / span 2
+        grid-column: 1 / span 2;
+        margin-top: 5px
+}
+  }
+
+@media(min-width: 1400px) {
+
+.findMe {
+        grid-column: 1 / span 1;
+        align-self: end;
+        border-bottom: 2px solid black;
+        margin: 0;
+        padding-bottom: 15px
 }
   }
 
@@ -546,6 +607,14 @@ a {
     }
   }
 
+@media(min-width: 1400px) {
+
+.findMe-title {
+            margin: 0;
+            padding: 0
+    }
+  }
+
 .findMe-github {
         padding: 5px 0 0 3px;
         border-left: 1px solid black;
@@ -557,6 +626,14 @@ a {
 
 .findMe-github {
             border: 0
+    }
+  }
+
+@media(min-width: 1400px) {
+
+.findMe-github {
+            margin: 0;
+            padding: 0
     }
   }
 
@@ -574,15 +651,36 @@ a {
     }
   }
 
+@media(min-width: 1400px) {
+
+.findMe-divider {
+            display: none
+    }
+  }
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
+    margin: 20px auto;
 }
 
 @media(min-width: 600px) {
 
 .container {
-        grid-template-columns: 1fr 2fr;
-        margin: 0 auto
+        grid-template-columns: 1fr 2fr
+}
+  }
+
+@media(min-width: 1400px) {
+
+.container {
+        width: 75%
+}
+  }
+
+@media(min-width: 2000px) {
+
+.container {
+        width: 1536px
 }
   }

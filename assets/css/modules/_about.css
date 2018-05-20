@@ -3,10 +3,14 @@
     @mixin atMedium {
         grid-column: 2 / span 1;
     }
+    @mixin atLarge {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
     &-name {
         font-size: 1.6rem;
         text-align: center;
-        margin: 20px 0 0 0;
+        margin: 0;
     }
     &-divider {
         margin: 0 0 0 auto;
@@ -24,6 +28,11 @@
         @mixin atMedium {
             width: 80%;
             border: none;
+        }
+        @mixin atLarge {
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
     }
 }

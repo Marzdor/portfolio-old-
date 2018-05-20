@@ -3,6 +3,14 @@
     grid-column: 1 / span 1;
     @mixin atMedium {
         grid-column: 1 / span 2;
+        margin-top: 5px;
+    }
+    @mixin atLarge {
+        grid-column: 1 / span 1;
+        align-self: end;
+        border-bottom: 2px solid black;
+        margin: 0;
+        padding-bottom: 15px;
     }
     &-title {
         font-size: 1.125rem;
@@ -11,6 +19,10 @@
         margin: -4px $M-marginLR 0 $M-marginLR;
         @mixin atMedium {
             border: 0;
+        }
+        @mixin atLarge {
+            margin: 0;
+            padding: 0;
         }
     }
     &-github {
@@ -21,6 +33,10 @@
         @mixin atMedium {
             border: 0;
         }
+        @mixin atLarge {
+            margin: 0;
+            padding: 0;
+        }
     }
     &-divider {
         margin: 0 0 10px auto;
@@ -29,6 +45,9 @@
         @mixin atMedium {
             width: 100%;
             margin: 0;
+        }
+        @mixin atLarge {
+            display: none;
         }
     }
 }

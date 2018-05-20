@@ -3,9 +3,11 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 30px;
     justify-items: center;
-    margin: 20px 0 0 0;
     @mixin atMedium {
         grid-column: 1 / span 1;
+    }
+    @mixin atLarge {
+        border-top: 2px solid black;
     }
     &-image {
         width: 40%;
@@ -14,6 +16,9 @@
         @mixin atMedium {
             width: 70%;
             align-self: center;
+        }
+        @mixin atLarge {
+            width: 90%;
         }
     }
     &-link {

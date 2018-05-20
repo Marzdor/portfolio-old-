@@ -4,7 +4,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column: 1 / span 2;
-        margin-top: 10px;
+    }
+    @mixin atLarge {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 3;
+        border-bottom: 2px solid black;
+        padding-bottom: 15px;
     }
     &-divider {
         display: none;
@@ -13,6 +18,10 @@
             display: block;
             border-color: black;
             width: 100%;
+            margin: 0 0 10px 0;
+        }
+        @mixin atLarge {
+            margin: 0;
         }
     }
     &-image {
@@ -22,7 +31,9 @@
         display: inline-block;
         & img {
             width: $M-thumbnailWidth;
+            padding-top: 5px;
             @mixin atMedium {
+                padding-top: 15px;
                 width: $T-thumbnailWidth;
             }
         }

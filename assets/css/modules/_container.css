@@ -1,8 +1,14 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
+    margin: 20px auto;
     @mixin atMedium {
         grid-template-columns: 1fr 2fr;
-        margin: 0 auto;
+    }
+    @mixin atLarge {
+        width: 75%;
+    }
+    @mixin atXLarge {
+        width: 1536px;
     }
 }
